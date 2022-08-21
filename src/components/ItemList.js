@@ -1,6 +1,8 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import './ItemList.css'
+import './ItemCount/ItemCount'
+import ItemCount from "./ItemCount/ItemCount";
 
 function ItemList(props) {
     const {title,description,greeting} = props;
@@ -12,7 +14,8 @@ function ItemList(props) {
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text">{description}</p>
-                    <a href="#" className="btn btn-primary">Hola, soy {greeting}</a>
+                    <h5><strong>Hola, soy {greeting}</strong> </h5>
+                    <ItemCount/>
                 </div>
             </div>
         </div>
