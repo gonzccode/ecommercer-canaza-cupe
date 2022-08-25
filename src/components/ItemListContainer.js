@@ -44,6 +44,7 @@ const ItemListContainer = () => {
                     title={item.title}
                     description={item.description}
                     greeting={item.greeting}
+                    index={index}
                     />
                 ))}
             </div>

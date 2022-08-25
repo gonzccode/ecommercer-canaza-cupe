@@ -4,18 +4,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './ItemCount.css'
 
-const ItemCount = () => {
-    const [stock, setStock] = useState(0);
+const ItemCount = ({stockItem, initial, onAdd, index}) => {
+    const [stock, setStock] = useState(initial);
 
     return (
         <div>
             <div>
-            <i class="bi bi-dash-circle-fill btn-add" onClick={stock > 0? () => setStock(stock - 1):0}></i>
+            <i className="bi bi-dash-circle-fill btn-add" onClick={stock > 0? () => setStock(stock - 1):0}></i>
             Cantidad: {stock}
-            <i class="bi bi-plus-circle-fill btn-add" onClick={stock < 10?() => setStock(stock + 1):10}></i>
+            <i className="bi bi-plus-circle-fill btn-add" onClick={stock < stockItem?() => setStock(stock + 1):stockItem}></i>
             </div>
             <div>
-                <button className="btn btn-success">
+                <button onClick={() => onAdd(stock,index+1)} className="btn btn-success" disabled={stock === 0}>
                     Agregar a carrito
                 </button>
             </div>

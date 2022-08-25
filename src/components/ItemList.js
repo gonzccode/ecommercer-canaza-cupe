@@ -3,9 +3,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './ItemList.css'
 import './ItemCount/ItemCount'
 import ItemCount from "./ItemCount/ItemCount";
+import { prettyDOM } from "@testing-library/react";
 
 function ItemList(props) {
-    const {title,description,greeting} = props;
+    const {title,description,greeting, index} = props;
+
+    const onAdd = (value, product) => {
+        console.log("Se agregó al carrito " +value + " items de productos " + product)
+    }
 
     return (
         <div className="col col-4">
@@ -15,7 +20,7 @@ function ItemList(props) {
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text">{description}</p>
                     <h5><strong>Hola, soy {greeting}</strong> </h5>
-                    <ItemCount/>
+                    <ItemCount stockItem={10} initial={1} onAdd={onAdd} index={index}/>
                 </div>
             </div>
         </div>
