@@ -2,6 +2,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import './NavBar.css';
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from 'react-router-dom';
 
 function NavBar(){
     return (
@@ -14,17 +15,17 @@ function NavBar(){
             <div className="collapse navbar-collapse" id="navbarText">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                    <a className="text-white nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                    <Link className="text-white nav-link active" aria-current="page" to={'/'}>Inicio</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="text-white nav-link" href="https://www.linkedin.com/in/gcanazacupe/">Nosotos</a>
+                    <Link className="text-white nav-link" to={'/'}>Productos</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="text-white nav-link" href="https://github.com/gonzccode?tab=repositories">Contacto</a>
+                    <Link className="text-white nav-link" to={'/'}>Contacto</Link>
                 </li>
                 </ul>
                 <span className="text-white navbar-text">
-                    <a className="text-white nav-link" href="#carrito"><CartWidget/></a>
+                    <Link className="text-white nav-link" to={'/'}><CartWidget/></Link>
                 </span>
             </div>
             </div>

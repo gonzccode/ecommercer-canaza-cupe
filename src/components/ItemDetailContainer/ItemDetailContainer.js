@@ -1,30 +1,47 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import productData from './products.json';
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState([])
+    const params = useParams();
+
+    const onAdd = (value) => {
+        console.log("Se agregó al carrito " +value + " items de productos " + params.id)
+    }
 
     useEffect(() =>{
-        fetch('products.json')
-        // .then(response => response.json())
-        .then(data => 
-            setTimeout(() => {
-                //llama al item 1
-                setProduct(data[0])
-                console.log(data)
-            },2000)
-            )
-        .catch((error) => {
-            console.error("Se produjo un error: ",error);
+        const products = new Promise ((resolve, rejected) => {
+          setTimeout(() =>{
+            resolve(productData.data[params.id-1])
+          }, 2000);
         })
   
-        return() => {}
+        products
+          .then(res => {
+            setProduct(res)
+        })
+          .catch((error) => console.log(error))
+          .finally(() => console.log("se cargó los productos"))
   
-    }, []);
-
+        return() => {
+          
+        }
+  
+      }, []);
 
     return (
-        <ItemDetail item={product} />
+        <> 
+            <div className="card" style={{width: '22rem'}}>
+                <ItemDetail item={product} />
+                <ItemCount stockItem={10} initial={1} onAdd={onAdd}/>
+            </div>
+            
+        </>
+        
+        
     )
 }
 
