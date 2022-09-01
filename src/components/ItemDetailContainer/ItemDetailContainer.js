@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import productData from './products.json';
 import ItemCount from '../ItemCount/ItemCount';
+import './ItemDetailContainer.css'
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState([])

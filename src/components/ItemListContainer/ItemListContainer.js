@@ -1,53 +1,61 @@
 import React, { useEffect, useState } from "react";
 import ItemList from '../ItemList/ItemList';
-import './ItemListContainer.css'
+import './ItemListContainer.css';
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([])
-
+    const params = useParams();
+    
     const arrayList = [
         {
           id: '1',
           title: 'Proyecto 1',
           description:'Este es el proyecto 1',
           greeting: 'Estudiante 1',
-          pictureUrl: 'https://i.pinimg.com/736x/37/8a/27/378a270e775265622393da8c0527417e.jpg'
+          pictureUrl: 'https://www.wozzo.es/images/wozzo/hosted1.png',
+          category: 'junior'
         },
         {
           id: '2',
           title: 'Proyecto 2',
           description:'Este es el proyecto 2',
           greeting: 'Estudiante 2',
-          pictureUrl: 'https://i.pinimg.com/736x/37/8a/27/378a270e775265622393da8c0527417e.jpg'
+          pictureUrl: 'https://www.wozzo.es/images/wozzo/octec1.png',
+          category: 'junior'
         },
         {
           id: '3',
           title: 'Proyecto 3',
           description:'Este es el proyecto 3',
           greeting: 'Estudiante 3',
-          pictureUrl: 'https://i.pinimg.com/736x/37/8a/27/378a270e775265622393da8c0527417e.jpg'
+          pictureUrl: 'https://www.wozzo.es/images/wozzo/poseForGood.png',
+          category: 'junior'
         },
         {
           id: '4',
           title: 'Proyecto 4',
           description:'Este es el proyecto 4',
           greeting: 'Estudiante 4',
-          pictureUrl: 'https://i.pinimg.com/736x/37/8a/27/378a270e775265622393da8c0527417e.jpg'
+          pictureUrl: 'https://www.wozzo.es/images/wozzo/epd-min.png',
+          category: 'senior'
         },
         {
           id: '5',
           title: 'Proyecto 5',
           description:'Este es el proyecto 5',
           greeting: 'Estudiante 5',
-          pictureUrl: 'https://i.pinimg.com/736x/37/8a/27/378a270e775265622393da8c0527417e.jpg'
+          pictureUrl: 'https://www.wozzo.es/images/wozzo/cmcMockup.jpg',
+          category: 'senior'
         },
         {
           id: '6',
           title: 'Proyecto 6',
           description:'Este es el proyecto 6',
           greeting: 'Estudiante 6',
-          pictureUrl: 'https://i.pinimg.com/736x/37/8a/27/378a270e775265622393da8c0527417e.jpg'
+          pictureUrl: 'https://www.wozzo.es/images/wozzo/kmConcept.jpg',
+          category: 'senior'
         },
     
     ] 
@@ -70,11 +78,13 @@ const ItemListContainer = () => {
 
     }, []);
 
+    const finallyProducts = params.category? products.filter((item) => item.category === params.category) : products
+    //console.log('yo params', params.category)
 
     return (
         <section className="container">
             <div className='row'>
-                {products.length <=0 ? <h3>Cargando productos ...</h3> : products.map((item,index) => (
+                {products.length <=0 ? <h3>Cargando productos ...</h3> : finallyProducts.map((item,index) => (
                     <ItemList key={index}
                     title={item.title}
                     description={item.description}

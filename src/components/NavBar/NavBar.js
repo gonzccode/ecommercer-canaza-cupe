@@ -18,10 +18,21 @@ function NavBar(){
                     <Link className="text-white nav-link active" aria-current="page" to={'/'}>Inicio</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="text-white nav-link" to={'/'}>Productos</Link>
+                    <Link className="text-white nav-link" to={'/categoria/junior'}>Junior</Link>
                 </li>
+                {/* <li class="nav-item dropdown">
+                    <Link class="text-white nav-link dropdown-toggle" to={'/'} role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorías
+                    </Link>
+                    <ul class="dropdown-menu">
+                        <li><Link class="dropdown-item"  to={'/categoria/junior'}>Junior</Link></li>
+                        <li><Link class="dropdown-item"  to={'/categoria/semi-senior'}>Semi-senior</Link></li>
+                        <li><hr class="dropdown-divider"/></li>
+                        <li><Link class="dropdown-item"  to={'/categoria/senior'}>Senior</Link></li>
+                    </ul>
+                </li> */}
                 <li className="nav-item">
-                    <Link className="text-white nav-link" to={'/'}>Contacto</Link>
+                    <Link className="text-white nav-link" to={'/categoria/senior'}>Senior</Link>
                 </li>
                 </ul>
                 <span className="text-white navbar-text">
