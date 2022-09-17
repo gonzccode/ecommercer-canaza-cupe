@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({item}) => {
   const [counter, setCounter] = useState(0);
+  const {addItem} = useContext(CartContext)
   const params = useParams();
 
-  const onAdd = (value) => {
-    console.log("Se agregó al carrito " +value + " items de productos " + params.id)
-    setCounter(value)
+  const onAdd = (count) => {
+    console.log("Se agregó al carrito " +count + " items de productos " + params.id)
+    setCounter(count)
+    addItem(item, count);
   }
 
 

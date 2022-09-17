@@ -8,7 +8,8 @@ function NavBar(){
     return (
         <nav className="navbar navbar-expand-lg bg-dark">
             <div className="container-fluid">
-            <a className="text-white navbar-brand" href="#">Proyect Student</a>
+            {/* <a className="text-white navbar-brand" href="#">Proyect Student</a> */}
+            <Link className="text-white nav-link" to={'/'}>Proyect Student</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -36,7 +37,7 @@ function NavBar(){
                 </li>
                 </ul>
                 <span className="text-white navbar-text">
-                    <Link className="text-white nav-link" to={'/'}><CartWidget/></Link>
+                    <Link className="text-white nav-link" to={'/cart'}><CartWidget/></Link>
                 </span>
             </div>
             </div>
