@@ -19,24 +19,28 @@ const ItemDetail = ({item}) => {
 
 
   return (
-    <div >
+    <>
+      {item.length <= 0 ? 
+        <div className='loading-item' style={{background: 'none'}}><h3>Cargando producto ...</h3></div> :
+        <div className='card-item'>
             <h4>{item.title}</h4>
             <img src={item.pictureUrl} className="card-img-top card-logo" alt="..."/>
             <div className="card-body">
                 <p>{item.description}</p>
                 <p><strong>S/. {item.price}</strong></p>
-            </div>
-            {
-              counter !== 0 ? 
-              <Link to={'/cart'}>
-                <button className="btn btn-primary">
-                    Finalizar compra
-                </button>
-              </Link> : 
-              <ItemCount stockItem={10} initial={1} onAdd={onAdd}/>
-            }
-            
+                {
+                  counter !== 0 ? 
+                  <Link to={'/cart'}>
+                    <button className="btn btn-primary" style={{'margin-top':'10px'}}>
+                        Finalizar compra
+                    </button>
+                  </Link> : 
+                  <ItemCount stockItem={10} initial={1} onAdd={onAdd}/>
+                }
+            </div> 
         </div>
+      }
+    </>
   )
 }
 

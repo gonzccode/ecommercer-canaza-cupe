@@ -15,7 +15,7 @@ const ItemCount = ({stockItem, initial, onAdd}) => {
             <i className="bi bi-plus-circle-fill btn-add" onClick={stock < stockItem?() => setStock(stock + 1):stockItem}></i>
             </div>
             <div>
-                <button onClick={() => onAdd(stock)} className="btn btn-success" disabled={stock === 0}>
+                <button onClick={() => onAdd(stock)} className="btn btn-success" disabled={stock === 0} style={{'margin-top':'10px'}}>
                     Agregar a carrito
                 </button>
             </div>
