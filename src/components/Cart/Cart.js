@@ -17,7 +17,7 @@ const Cart = () => {
 
   return (
     <>
-      <div style={{'margin-top':'10px'}}>
+      <div style={{'marginTop':'10px'}}>
         <h2>
           <strong>Carrito de compras</strong>
         </h2>

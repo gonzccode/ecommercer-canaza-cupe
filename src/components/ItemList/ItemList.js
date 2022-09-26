@@ -12,7 +12,7 @@ function ItemList(props) {
         <div className="col col-4">
             <div className="card" style={{width: '22rem'}}>
                 <img src={pictureUrl} className="card-img-top card-logo" alt="..."/>
-                <div className="card-body">
+                <div className="card-body" style={{'borderTop': '1px solid black'}}>
                     <Item title={title} description={description} greeting={greeting} />
                     <Link to={`/detalle/${index}`}>Más detalle</Link>
                 </div>
