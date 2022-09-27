@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import db from '../../services';
 import { addDoc, collection, getDocs } from 'firebase/firestore';
+import emailjs from 'emailjs-com';
 
 
 
@@ -42,6 +43,21 @@ const Formulario = ({total, items}) => {
         try {
             const col = collection(db, "ordenes")
             const generateOrder =  await addDoc(col, order)
+            //console.log(order)
+
+            emailjs.send('service_3xkrcvn','template_am8452s', {
+                name: order.buyer.name,
+                surname: order.buyer.surname,
+                email: order.buyer.email,
+                phone: order.buyer.phone,
+                message: 'Su orden se genero correctamente.' + ' Su número de compra es ' + generateOrder.id + '.'
+            }, 'uRDOr5vv-7D0oty7x')
+            .then((response) => {
+                    console.log('Correo enviado! ', response.status, response.text);
+            }, (err) => {
+                    console.log('Correo fallido...', err);
+            });
+
             MySwal.fire({
                     title: 'Compra exitosa',
                     text: 'Su orden se genero correctamente ' + ' ' + generateOrder.id,
