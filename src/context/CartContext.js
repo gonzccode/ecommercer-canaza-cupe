@@ -21,8 +21,9 @@ export function CartProvider ({children}) {
         setItems(items.filter((item) => item.id !== itemId))
     }
 
-    function clear(){
+    function clearCart(){
         setItems([]);
+        
     }
 
     function isInCart(itemId){
@@ -36,7 +37,7 @@ export function CartProvider ({children}) {
 
 
     return (
-        <CartContext.Provider value={{addItem, removeItem, items}}>
+        <CartContext.Provider value={{addItem, removeItem, clearCart, items}}>
             {children}
         </CartContext.Provider>
     )

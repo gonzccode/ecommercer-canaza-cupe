@@ -105,7 +105,7 @@ const ItemListContainer = () => {
     //console.log('yo params', params.category)
 
     return (
-        <section className="container" style={{'paddingBottom':'20px'}}>
+        <div className="container" style={{'paddingBottom':'20px'}}>
             <div className='row'>
                 {products.length <=0 ? <h3>Cargando productos ...</h3> : finallyProducts.map((item,index) => (
                     <ItemList key={index}
@@ -117,7 +117,7 @@ const ItemListContainer = () => {
                     />
                 ))}
             </div>
-        </section>
+        </div>
         
     );
 }

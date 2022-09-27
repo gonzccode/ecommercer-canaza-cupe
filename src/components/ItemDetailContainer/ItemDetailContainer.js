@@ -35,8 +35,8 @@ const ItemDetailContainer = () => {
             const col = await getDocs(data);
             const res = col.docs.map((doc) => doc = {id: doc.id, ... doc.data()} )
             const result = res.filter((item) => item.id == params.id)
-            console.log(result[0])
-            console.log(params.id)
+            //console.log(result[0])
+            //console.log(params.id)
             setTimeout(() =>{
               // setProduct(res[params.id])
               setProduct(result[0])

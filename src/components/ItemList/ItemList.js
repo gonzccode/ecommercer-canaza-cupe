@@ -9,8 +9,8 @@ function ItemList(props) {
     const {title,description,greeting, index, pictureUrl} = props;
 
     return (
-        <div className="col col-4">
-            <div className="card" style={{width: '22rem'}}>
+        <div className="col-md-4">
+            <div className="card" style={{maxWidth: '22rem'}}>
                 <img src={pictureUrl} className="card-img-top card-logo" alt="..."/>
                 <div className="card-body" style={{'borderTop': '1px solid black'}}>
                     <Item title={title} description={description} greeting={greeting} />

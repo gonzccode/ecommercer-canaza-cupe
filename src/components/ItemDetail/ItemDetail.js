@@ -12,7 +12,7 @@ const ItemDetail = ({item}) => {
   const params = useParams();
 
   const onAdd = (count) => {
-    console.log("Se agregó al carrito " +count + " items de productos " + params.id)
+    //console.log("Se agregó al carrito " +count + " items de productos " + params.id)
     setCounter(count)
     addItem(item, count);
   }
@@ -31,7 +31,7 @@ const ItemDetail = ({item}) => {
                 {
                   counter !== 0 ? 
                   <Link to={'/cart'}>
-                    <button className="btn btn-primary" style={{'margin-top':'10px'}}>
+                    <button className="btn btn-primary" style={{'marginTop':'10px'}}>
                         Finalizar compra
                     </button>
                   </Link> : 
