@@ -9,7 +9,7 @@
 ### Explicación proyecto
 La plataforma es acerca de vender proyectos de estudiantes, en el inicio se muestra los proyectos totales y con 
 las categorias Junior y Senior se va segmentando los proyectos, así también al dar click en cada item se muestra más detalle, 
-todo esto variando las URL's y mostrando el parametro de cada item o categoria.
+todo esto variando las URL's y mostrando el parametro de cada item o categoria. Puede escoger todos los productos que desee, ir agregando y eliminando los productos para finalmente verlo todo en el carrito de compras, donde podrá colocar sus datos para que se confirme la compra, al finalizar se le da el código de compra y se le envia un mensaje al correo introducido. 
 
 #### Funcionamiento de proyecto
 
