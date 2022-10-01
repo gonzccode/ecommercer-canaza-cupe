@@ -1,7 +1,7 @@
 ## Proyecto: Project Student
 
-Alumno: Canaza Cupe Gonzalo.
-Url de proyecto: https://proyectostudent.netlify.app/
+1. Alumno: Canaza Cupe Gonzalo.
+2. Url de proyecto: https://proyectostudent.netlify.app/
 
 ### Explicación proyecto
 La plataforma es acerca de vender proyectos de estudiantes, en el inicio se muestra los proyectos totales y con 
