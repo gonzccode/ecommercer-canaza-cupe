@@ -7,7 +7,7 @@ La plataforma es acerca de vender proyectos de estudiantes, en el inicio se mues
 las categorias Junior y Senior se va segmentando los proyectos, así también al dar click en cada item se muestra más detalle, 
 todo esto variando las URL's y mostrando el parametro de cada item o categoria.
 
-![](https://giphy.com/gifs/Ene22YyPgwYMqxLd21/proyecto-final.gif)
+![Alt Text](https://media.giphy.com/media/Ene22YyPgwYMqxLd21/giphy.gif)
 
 Para iniciar el proyecto siga los siguiente pasos: 
 
