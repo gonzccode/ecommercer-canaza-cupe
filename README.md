@@ -1,3 +1,28 @@
+## Proyecto: Project Student
+
+Alumno: Canaza Cupe Gonzalo.
+
+### Explicación proyecto
+La plataforma es acerca de vender proyectos de estudiantes, en el inicio se muestra los proyectos totales y con 
+las categorias Junior y Senior se va segmentando los proyectos, así también al dar click en cada item se muestra más detalle, 
+todo esto variando las URL's y mostrando el parametro de cada item o categoria.
+
+![alt-text](https://giphy.com/gifs/Ene22YyPgwYMqxLd21/proyecto-final.gif)
+
+Para iniciar el proyecto siga los siguiente pasos: 
+
+0. git clone https://github.com/gonzccode/ecommercer-canaza-cupe.git
+1. git init
+2. npm install
+3. npm install bootstrap
+4. npm install bootstrap-icons
+5. npm install emailjs-com
+6. npm install firebase
+7. npm install react-dom
+8. npm install react-router-dom
+9. npm install sweetalert2
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,26 +94,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-## Proyecto: Project Student
-
-Alumno: Canaza Cupe Gonzalo.
-
-### Explicación proyecto
-La plataforma es acerca de vender proyectos de estudiantes, en el inicio se muestra los proyectos totales y con 
-las categorias Junior y Senior se va segmentando los proyectos, así también al dar click en cada item se muestra más detalle, 
-todo esto variando las URL's y mostrando el parametro de cada item o categoria.
-
-![](https://drive.google.com/file/d/1ISDfl1hErwuqEqPxtLFER2S4I32oJZ3i/view?usp=sharing)
-
-Para iniciar el proyecto siga los siguiente pasos: 
-
-0. git clone https://github.com/gonzccode/ecommercer-canaza-cupe.git
-1. git init
-2. npm install
-3. npm install bootstrap
-4. npm install bootstrap-icons
-5. npm install emailjs-com
-6. npm install firebase
-7. npm install react-dom
-8. npm install react-router-dom
-9. npm install sweetalert2
