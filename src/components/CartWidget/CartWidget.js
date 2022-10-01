@@ -13,9 +13,8 @@ function CartWidget () {
     })
 
     return (
-        <div className="CartWidget">
-            
-            <i className="bi bi-cart-fill">
+        <div className="CartWidget" style={{marginLeft:'-80px', marginBottom:'-18px'}}>  
+            <i className="bi bi-cart-fill" style={{fontSize:'30px'}}>
                 {total == 0 ?  <p></p> : total }
             </i>
         </div>

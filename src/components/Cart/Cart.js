@@ -6,6 +6,7 @@ import Formulario from '../Formulario/Formulario'
 const Cart = () => {
   const {items} = useContext(CartContext);
   const {removeItem} = useContext(CartContext);
+  const {clearCart} = useContext(CartContext);
   let total = 0;
 
   items.map(item => {
@@ -16,13 +17,16 @@ const Cart = () => {
     removeItem(id)
   }
 
+  const clearCartAll = ()=>{
+    clearCart()
+  }
+
   return (
     <>
-      <div style={{'marginTop':'10px'}}>
+      <div style={{'marginTop':'30px'}}>
         <h2>
           <strong>Carrito de compras</strong>
         </h2>
-        
       </div>
       {items.length ?
         <div className='container'>
@@ -38,7 +42,6 @@ const Cart = () => {
                     <div className="col-md-6">
                       <div className="card-body">
                         <h5 className="card-title">{item.title}</h5>
-                        {/* <p class="card-text"><small class="text-muted">{item.greeting}</small></p> */}
                         <p className="card-text">Precio: {item.price} / Cantidad: {item.quantity}</p>
                         <p className="card-text" style={{'marginTop':'-8px'}}><strong>Sub Total: S/. {item.price*item.quantity}</strong></p>
                         <button className="btn btn-danger btn-sm" style={{'marginTop':'-5px', paddingBottom:'5px'}} onClick={()=> removeItemCart(item.id)}>
@@ -50,11 +53,15 @@ const Cart = () => {
                 </div>
                   ))}
               </ol>
+              <div>
+                <button className="btn btn-secondary btn-md mb-2" onClick={clearCartAll}>
+                  Vaciar carrito
+                </button>
+              </div>
             </div>
+
             <div className='card col-md-6'>
-              
               <Formulario total={total} items={items} />
-              
             </div>
           </div>
         </div>  
@@ -71,7 +78,6 @@ const Cart = () => {
       </div>
       }
     </>
-    
   )
 }
 

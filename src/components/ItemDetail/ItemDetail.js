@@ -12,20 +12,18 @@ const ItemDetail = ({item}) => {
   const params = useParams();
 
   const onAdd = (count) => {
-    //console.log("Se agregó al carrito " +count + " items de productos " + params.id)
     setCounter(count)
     addItem(item, count);
   }
 
-
   return (
-    <>
+    <div>
       {item.length <= 0 ? 
         <div className='loading-item' style={{background: 'none'}}><h3>Cargando producto ...</h3></div> :
-        <div className='card-item'>
-            <h4>{item.title}</h4>
+        <div className='card-item' >
             <img src={item.pictureUrl} className="card-img-top card-logo" alt="..."/>
             <div className="card-body">
+                <h4>{item.title}</h4>
                 <p>{item.description}</p>
                 <p><strong>S/. {item.price}</strong></p>
                 {
@@ -40,7 +38,7 @@ const ItemDetail = ({item}) => {
             </div> 
         </div>
       }
-    </>
+    </div>
   )
 }
 

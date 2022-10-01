@@ -5,3 +5,8 @@
 .card-logo {
     height: 30vmin;
 }
+
+.body{
+    display: flex;
+    align-items: center
+}

@@ -10,15 +10,18 @@ function ItemList(props) {
 
     return (
         <div className="col-md-4">
-            <div className="card" style={{maxWidth: '22rem'}}>
-                <img src={pictureUrl} className="card-img-top card-logo" alt="..."/>
+            <div className="card" style={{maxWidth: '22rem', borderRadius:'25px'}}>
+                <img src={pictureUrl} className="card-img-top card-logo" alt="..." style={{borderRadius:'25px 25px 0px 0px'}} />
                 <div className="card-body" style={{'borderTop': '1px solid black'}}>
                     <Item title={title} description={description} greeting={greeting} />
-                    <Link to={`/detalle/${index}`}>Más detalle</Link>
+                    <Link to={`/detalle/${index}`}>
+                        <button className="btn btn-primary">
+                            Más detalle
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
-        
     );
 }
 

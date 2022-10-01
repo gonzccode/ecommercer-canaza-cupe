@@ -7,8 +7,6 @@ import db from '../../services';
 import { addDoc, collection, getDocs } from 'firebase/firestore';
 import emailjs from 'emailjs-com';
 
-
-
 const Formulario = ({total, items}) => {
 
     const MySwal = withReactContent(Swal)
@@ -43,7 +41,6 @@ const Formulario = ({total, items}) => {
         try {
             const col = collection(db, "ordenes")
             const generateOrder =  await addDoc(col, order)
-            //console.log(order)
 
             emailjs.send('service_3xkrcvn','template_am8452s', {
                 name: order.buyer.name,
@@ -89,9 +86,6 @@ const Formulario = ({total, items}) => {
                 confirmButtonText: 'Confirmar'
             })
         }
-        
-
-        //clearCart() 
     }
     
     return (
@@ -156,11 +150,9 @@ const Formulario = ({total, items}) => {
                             </strong>
                         </h4>
                         <div>
-                            {/* <Link to={'/'}> */}
-                                <button className="btn btn-primary btn-md mb-2" type="submit">
+                            <button className="btn btn-primary btn-md mb-2" type="submit">
                                 Terminar la compra
-                                </button>
-                            {/* </Link> */}
+                            </button>
                         </div>
                         <div>
                             <Link to={'/'}>
