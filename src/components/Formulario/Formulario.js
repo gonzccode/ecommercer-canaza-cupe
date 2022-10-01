@@ -57,7 +57,7 @@ const Formulario = ({total, items}) => {
 
             MySwal.fire({
                     title: 'Compra exitosa',
-                    text: 'Su orden se genero correctamente ' + ' ' + generateOrder.id,
+                    text: 'Su orden se genero correctamente ' + ' ' + generateOrder.id + '. Enviamos a su cuenta un correo eléctronico.' ,
                     icon: 'success',
                     confirmButtonColor: '#28a745',
                     confirmButtonText: 'Confirmar'
